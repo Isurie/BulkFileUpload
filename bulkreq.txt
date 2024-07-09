@@ -1,0 +1,23 @@
+curl --location 'http://localhost:8682/backoffice/fundTransfer/bulkupload' \
+--header 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0' \
+--header 'Accept: application/json' \
+--header 'Accept-Language: en-US,en;q=0.5' \
+--header 'Accept-Encoding: gzip, deflate, br, zstd' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer XXXXXXX' \
+--header 'Origin: https://testdev.bank.co.lk' \
+--header 'Connection: keep-alive' \
+--header 'Referer: https://testdev.bank.co.lk/testbank-frontend-web/' \
+--header 'Cookie: xxx=xxx; xxx=xxx; xxx=xxx' \
+--header 'Sec-Fetch-Dest: empty' \
+--header 'Sec-Fetch-Mode: cors' \
+--header 'Sec-Fetch-Site: same-origin' \
+--header 'Priority: u=1' \
+--data '{
+    "bulk":"A/A, Employee'\''s Account Name,Employees Account Number,Employer'\''s Account Number,Amount,Bank,Branch,Originator reference,Currency,Fund Transfer Type\r\n1,FRED ONE,10XXXXXXXXXXX,32XXXXXXXX,202,56,1,SACO LUGOGO, LKR,THIRDPARTY\r\n2,JOHN,10XXXXXXXXXXX,32XXXXXXXX,203,16,1,EXODUS FRED, LKR,THIRDPARTY\r\n3,LUKE,10XXXXXXXXXXX,32XXXXXXXX,205,20,1,SACO LUGOGO,LKR,EFT",
+    "transactionNumber":"3",
+    "bulkTotal":"3",
+    "accountNumber":"32XXXXXXXX",
+    "bulkName":"Salary Payment",
+    "fundTrxnType":"SALARY"
+}'
